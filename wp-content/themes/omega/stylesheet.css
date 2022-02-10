@@ -1,0 +1,39 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+   /* font-family: 'Poppins', sans-serif;*/
+}
+
+
+/* Header */
+
+header {
+    position: absolute;
+}
+
+.logo_wrapper {
+
+}
+
+#logo {
+    width: 184px;
+    height: 37px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.menu_wrapper {
+
+}
+
+/* Main */
+
+#section_one {
+    background-image: url(/wp-content/themes/omega/images/background.webp);
+    height: 500px;
+}
