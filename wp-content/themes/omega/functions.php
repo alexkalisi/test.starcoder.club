@@ -3,12 +3,24 @@
  * Functions
  */
 
+if (!function_exists('mytheme_setup')):
+    function mytheme_setup(){
+        add_theme_support('post-thumbnails');
+        set_post_thumbnail_size(1200, 9999);
+    }
+endif;
+add_action('after_setup_theme', 'mytheme_setup');
+
  // WP enqueue scripts
- add_action( 'wp_enqueue_scripts', 'add_stylesheet', 25 );
+ add_action( 'wp_enqueue_scripts', 'add_enqueue_scripts', 25 );
  
-function add_stylesheet() {
+function add_enqueue_scripts() {
  	wp_enqueue_style( 'true_stili', get_stylesheet_directory_uri() . '/stylesheet.css' );
+	wp_enqueue_script('axios', 'https://unpkg.com/axios/dist/axios.min.js');
+	wp_enqueue_script('newscript', get_template_directory_uri() . '/js/all_script.js');
 }
+
+//wp_enqueue_script('newscript', get_template_directory_uri() . '/js/all_script.js');
 
 
 // Stick Admin Bar To The Top

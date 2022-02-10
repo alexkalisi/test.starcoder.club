@@ -121,6 +121,27 @@ fieldset + fieldset > legend {
     cursor: pointer;
 }
 
+#section_two {
+
+}
+
+#posts_wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.post_item {
+
+}
+
+.post_thumb img {
+    width: 100%;
+    height: 100%;
+}
+
+.post_content {
+
+}
 
 /* Footer */
 

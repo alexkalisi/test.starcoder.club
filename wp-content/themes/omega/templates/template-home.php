@@ -19,8 +19,8 @@ get_header(); ?>
 		</div>
 	</section>
 	<section id="section_two">
-
-</section>
+		<div class="container" id="posts_wrapper"></div>
+	</section>
 </main>
 
 <?php get_footer(); ?>
