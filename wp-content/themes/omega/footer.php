@@ -15,7 +15,7 @@
 			foreach( $media_option as $media_items ) {
 				$item_ico = $media_items['ico'];
 				$item_url = $media_items['url']; ?>
-				<a href="<?php echo $item_url; ?>"><div class="background_image media_ico" style="background-image: url(<?php echo $item_ico; ?>)"></div></a>
+				<a href="<?php echo $item_url; ?>"><div class="background_image media_ico" style="-webkit-mask-image: url(<?php echo $item_ico; ?>); mask-image: url(<?php echo $item_ico; ?>);"></div></a>
 			<?php }
 		} ?>
 		</div>
@@ -25,7 +25,13 @@
 
 
 <!-- END of footer -->
-
+<script>
+window.phpData = {
+	form_title: "<?php echo get_field("form_title", pll_current_language("slug")); ?>",
+	name_placeholder: "<?php echo get_field("name_placeholder", pll_current_language("slug")); ?>",
+	submit: "<?php echo get_field("submit", pll_current_language("slug")); ?>",
+};
+</script>
 <?php wp_footer(); ?>
 </body>
 </html>

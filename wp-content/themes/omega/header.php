@@ -21,7 +21,12 @@
 <body>
 
 <!-- BEGIN of header -->
-<header>
+<?php global $post;
+$header_class = '';
+if ($post->ID === 28) {
+	$header_class = 'class="header_absolute"';
+} ?>
+<header <?php if ($header_class) echo $header_class; ?>>
 	<div class="container">
 		<div class="logo_wrapper">
 			<a href="/"><div class="background_image" id="logo" style="background-image: url(<?php the_field('logo_option', pll_current_language()); ?>)"></div></a>
@@ -38,7 +43,7 @@
 					<li><a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a></li>
 				<?php } 
 			} ?>
-			<ul>
+			</ul>
 		<?php } ?>
 	</div>
 </header>
